@@ -6,7 +6,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
-st.set_page_config(page_title="AI kishmish")
+st.set_page_config(page_title="Khajur")
 
 st.title("Kaju")
 
@@ -30,7 +30,7 @@ if st.button("Analyze"):
         retrieve = vectorstore.as_retriever()
 
         # Load and integrate LLM model
-        llm = Ollama(model="gemma2:latest")
+        llm = Ollama(model="gemma:latest")
 
         # Prompt template design
         prompt = ChatPromptTemplate.from_template("""
